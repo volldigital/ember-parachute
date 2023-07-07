@@ -1,7 +1,7 @@
-import { get } from '@ember/object';
-import { assert } from '@ember/debug';
-import { isPresent } from '@ember/utils';
-import Ember from 'ember';
+import { get } from "@ember/object";
+import { assert } from "@ember/debug";
+import { isPresent } from "@ember/utils";
+import Ember from "ember";
 
 const { canInvoke } = Ember;
 
@@ -14,7 +14,7 @@ const { canInvoke } = Ember;
 export default class QueryParam {
   constructor(key, options = {}) {
     assert(
-      `[ember-parachute] You must specify a key to the QueryParam Class`,
+      `[@volldigital/ember-parachute] You must specify a key to the QueryParam Class`,
       isPresent(key)
     );
 
@@ -50,7 +50,7 @@ export default class QueryParam {
    */
   serializedValue(controller) {
     const value = this.value(controller);
-    return canInvoke(this, 'serialize')
+    return canInvoke(this, "serialize")
       ? this.serialize(value, controller)
       : value;
   }

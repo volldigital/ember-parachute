@@ -1,9 +1,9 @@
-import { A } from '@ember/array';
-import { PARACHUTE_QPS } from 'ember-parachute/-private/symbols';
+import { A } from "@ember/array";
+import { PARACHUTE_QPS } from "@volldigital/ember-parachute/-private/symbols";
 import {
   addQueryParamFor,
-  getQueryParamsFor
-} from './-private/query-params-for';
+  getQueryParamsFor,
+} from "./-private/query-params-for";
 
 function createDescriptor(desc, qpDefinition) {
   qpDefinition = qpDefinition || {};
@@ -30,11 +30,11 @@ function createDescriptor(desc, qpDefinition) {
       }
 
       return klass;
-    }
+    },
   };
 
-  if (desc.kind === 'field') {
-    if (typeof desc.initializer === 'function') {
+  if (desc.kind === "field") {
+    if (typeof desc.initializer === "function") {
       qpDefinition.defaultValue = desc.initializer();
     }
 
@@ -48,10 +48,10 @@ function createDescriptor(desc, qpDefinition) {
 
 export default function queryParam(qpDefinition) {
   // Handle `@queryParam` usage
-  if (`${qpDefinition}` === '[object Descriptor]') {
+  if (`${qpDefinition}` === "[object Descriptor]") {
     return createDescriptor(qpDefinition);
   }
 
   // Handle `@queryParam()` usage
-  return desc => createDescriptor(desc, qpDefinition);
+  return (desc) => createDescriptor(desc, qpDefinition);
 }

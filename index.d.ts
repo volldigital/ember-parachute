@@ -1,10 +1,10 @@
-declare module 'ember-parachute' {
+declare module "@volldigital/ember-parachute" {
   interface QueryParamOption<T> {
     as?: string;
     defaultValue?: T;
     refresh?: boolean;
     replace?: boolean;
-    scope?: 'controller';
+    scope?: "controller";
     serialize?(value: T): string;
     deserialize?(value: string): T;
   }
@@ -16,7 +16,7 @@ declare module 'ember-parachute' {
       value: T[K];
       default: T[K];
       changed: boolean;
-    }
+    };
   };
 
   export interface ParachuteEvent<T> {

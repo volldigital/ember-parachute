@@ -1,6 +1,6 @@
-import { assert } from '@ember/debug';
-import { isPresent } from '@ember/utils';
-import QueryParams from '../query-params';
+import { assert } from "@ember/debug";
+import { isPresent } from "@ember/utils";
+import QueryParams from "../query-params";
 
 /**
  * Creates QueryParamsState interface.
@@ -19,7 +19,7 @@ function queryParamsState(queryParamsArray, controller) {
         serializedValue: qp.serializedValue(controller),
         as: qp.as,
         defaultValue: qp.defaultValue,
-        changed: JSON.stringify(value) !== JSON.stringify(qp.defaultValue)
+        changed: JSON.stringify(value) !== JSON.stringify(qp.defaultValue),
       };
       return state;
     },
@@ -38,7 +38,7 @@ function queryParamsState(queryParamsArray, controller) {
  */
 export default function queryParamsStateFor(controller) {
   assert(
-    '[ember-parachute] Cannot construct query params state object without a controller',
+    "[@volldigital/ember-parachute] Cannot construct query params state object without a controller",
     isPresent(controller)
   );
   let { queryParamsArray } = QueryParams.metaFor(controller);

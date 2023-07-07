@@ -1,12 +1,8 @@
 # Ember Parachute
 
-[![Build Status](https://travis-ci.org/offirgolan/ember-parachute.svg?branch=master)](https://travis-ci.org/offirgolan/ember-parachute)
-[![npm version](https://badge.fury.io/js/ember-parachute.svg)](http://badge.fury.io/js/ember-parachute)
-[![Ember Observer Score](http://emberobserver.com/badges/ember-parachute.svg)](http://emberobserver.com/addons/ember-parachute)
+## <img src="https://i.imgur.com/HaN5cCc.png" alt="@volldigital/ember-parachute" width="30"> Philosophy
 
-## <img src="https://i.imgur.com/HaN5cCc.png" alt="ember-parachute" width="30"> Philosophy
-
-`ember-parachute` is an addon that improves upon the experience of working with
+`@volldigital/ember-parachute` is an addon that improves upon the experience of working with
 query params in Ember. Instead of defining query params in both your route and controller, with this addon you can define them in one place as a query param map/object.
 
 This map is the source of truth for your query params, and will generate a mixin that you can then add into your controller. The mixin adds very helpful properties and methods that makes working with query params a breeze!
@@ -16,7 +12,7 @@ One important point about this addon is that it is opinionated about _where_ the
 ## Installation
 
 ```
-ember install ember-parachute
+ember install @volldigital/ember-parachute
 ```
 
 ## Helpful Links
@@ -26,7 +22,7 @@ ember install ember-parachute
 
 ## Looking for help?
 
-If it is a bug [please open an issue on GitHub](http://github.com/offirgolan/ember-parachute/issues).
+If it is a bug [please open an issue on GitHub](http://github.com/@volldigital/ember-parachute/issues).
 
 ## Usage
 
@@ -34,7 +30,7 @@ The source of truth for your application's query params are query param maps. Fi
 
 ```js
 import Controller from '@ember/controller';
-import QueryParams from 'ember-parachute';
+import QueryParams from '@volldigital/ember-parachute';
 import { or } from '@ember/object/computed';
 
 export const myQueryParams = new QueryParams({
@@ -101,13 +97,13 @@ Please continue reading for more advanced usage.
 
 ## Decorators
 
-This package provides some decorators in order to use ember-parachute with the now supported class syntax.
+This package provides some decorators in order to use @volldigital/ember-parachute with the now supported class syntax.
 
 ### `queryParam`
 
 ```js
 import Controller from '@ember/controller';
-import { queryParam } from 'ember-parachute/decorators';
+import { queryParam } from '@volldigital/ember-parachute/decorators';
 
 export default class MyController extends Controller {
   @queryParam({
@@ -144,7 +140,7 @@ If you're not using any query params but still want the `setup` and `reset` hook
 
 ```js
 import Controller from '@ember/controller';
-import { withParachute } from 'ember-parachute/decorators';
+import { withParachute } from '@volldigital/ember-parachute/decorators';
 
 @withParachute
 export default class MyController extends Controller {
@@ -158,7 +154,7 @@ export default class MyController extends Controller {
 The query param map is the source of truth for your query params. Here, you'll be able to define configuration for each query param:
 
 ```js
-import QueryParams from 'ember-parachute';
+import QueryParams from '@volldigital/ember-parachute';
 
 const myQueryParams = new QueryParams({
   direction: {
@@ -277,7 +273,7 @@ Your controller value for `showReadme` will still be `true` or `false`, even tho
 The Query Param Map not only accepts multiple arguments, but it can also be extended.
 
 ```js
-import QueryParams from 'ember-parachute';
+import QueryParams from '@volldigital/ember-parachute';
 
 const SortParams = {
   sortName: {
@@ -532,7 +528,6 @@ If you set a new default value after the existing default has been promoted to t
 **NOTE**: Changing the defaultValue at any point will not clear the query parameter from being shown in the URI. We do not have control over that as it is private API.
 
 [changelog]: CHANGELOG.md
-[demo]: https://offirgolan.github.io/ember-parachute
 [ember-metrics]: https://github.com/poteto/ember-metrics
 [ember-qp-docs]: https://guides.emberjs.com/v2.14.0/routing/query-params/
 [skeleton-loading]: https://emberway.io/skeleton-screen-loading-in-ember-js-2f7ac2384d63

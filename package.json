@@ -1,5 +1,5 @@
 {
-  "name": "ember-parachute",
+  "name": "@volldigital/ember-parachute",
   "version": "1.0.2",
   "description": "Improves the experience of working with query params in Ember",
   "keywords": [
@@ -7,9 +7,9 @@
     "query params",
     "parachute"
   ],
-  "repository": "https://github.com/offirgolan/ember-parachute",
+  "repository": "https://github.com/@volldigital/ember-parachute",
   "license": "MIT",
-  "author": "Offir Golan <offirgolan@gmail.com>",
+  "author": "Offir Golan <@volldigital@gmail.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -18,8 +18,8 @@
     "Lauren Tan <arr@sugarpirate.com>"
   ],
   "types": "index.d.ts",
-  "bugs": "https://github.com/offirgolan/ember-parachute/issues",
-  "homepage": "https://github.com/offirgolan/ember-parachute",
+  "bugs": "https://github.com/@volldigital/ember-parachute/issues",
+  "homepage": "https://github.com/@volldigital/ember-parachute",
   "scripts": {
     "build": "ember build",
     "lint:hbs": "ember-template-lint .",
@@ -33,7 +33,6 @@
   },
   "devDependencies": {
     "@ember-decorators/babel-transforms": "^4.0.0",
-    "@ember/jquery": "^0.5.2",
     "@ember/optional-features": "^0.6.3",
     "babel-eslint": "^10.0.1",
     "broccoli-asset-rev": "^2.7.0",
@@ -60,7 +59,7 @@
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^2.0.0",
     "ember-maybe-import-regenerator": "^0.1.6",
-    "ember-paper": "^1.0.0-beta.21",
+    "ember-paper": "1.0.0-beta.36",
     "ember-qunit": "^3.4.1",
     "ember-qunit-nice-errors": "^1.1.2",
     "ember-resolver": "^5.0.1",
@@ -78,7 +77,6 @@
     "node": "6.* || 8.* || >= 10.*"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config",
-    "demoURL": "http://offirgolan.github.io/ember-parachute"
+    "configPath": "tests/dummy/config"
   }
 }

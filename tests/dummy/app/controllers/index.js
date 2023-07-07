@@ -1,43 +1,43 @@
-import Controller from '@ember/controller';
-import { A } from '@ember/array';
-import { queryParam } from 'ember-parachute/decorators';
-import { timeout } from 'ember-concurrency';
-import { action } from '@ember-decorators/object';
-import { or } from '@ember-decorators/object/computed';
-import { task } from 'ember-concurrency-decorators';
+import Controller from "@ember/controller";
+import { A } from "@ember/array";
+import { queryParam } from "@volldigital/ember-parachute/decorators";
+import { timeout } from "ember-concurrency";
+import { action } from "@ember-decorators/object";
+import { or } from "@ember-decorators/object/computed";
+import { task } from "ember-concurrency-decorators";
 
 export default class IndexController extends Controller {
   @queryParam({
-    as: 'parachute',
+    as: "parachute",
     serialize(value) {
-      return value ? 'open' : 'closed';
+      return value ? "open" : "closed";
     },
     deserialize(value) {
-      return value === 'open' ? true : false;
-    }
+      return value === "open" ? true : false;
+    },
   })
   parachuteOpen = true;
 
   @queryParam({ refresh: true }) page = 1;
 
-  @queryParam({ refresh: true }) search = '';
+  @queryParam({ refresh: true }) search = "";
 
   @queryParam({
     refresh: true,
-    serialize(value = '') {
+    serialize(value = "") {
       return value.toString();
     },
-    deserialize(value = '') {
-      return value.split(',');
-    }
+    deserialize(value = "") {
+      return value.split(",");
+    },
   })
-  tags = ['Ember', 'Parachute'];
+  tags = ["Ember", "Parachute"];
 
-  @or('queryParamsState.{page,search,tags}.changed') queryParamsChanged;
+  @or("queryParamsState.{page,search,tags}.changed") queryParamsChanged;
 
   setup({ queryParams }) {
     if (queryParams.parachuteOpen) {
-      this.get('fetchModel').perform();
+      this.get("fetchModel").perform();
     }
   }
 
@@ -49,7 +49,7 @@ export default class IndexController extends Controller {
 
   queryParamsDidChange({ shouldRefresh, queryParams }) {
     if (shouldRefresh && queryParams.parachuteOpen) {
-      this.get('fetchModel').perform();
+      this.get("fetchModel").perform();
     }
   }
 
@@ -75,8 +75,8 @@ export default class IndexController extends Controller {
 
   @action
   setDefaults() {
-    ['search', 'page', 'tags'].forEach(key => {
-      let value = key === 'tags' ? this.get(key).concat() : this.get(key);
+    ["search", "page", "tags"].forEach((key) => {
+      let value = key === "tags" ? this.get(key).concat() : this.get(key);
       this.setDefaultQueryParamValue(key, value);
     });
   }

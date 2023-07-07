@@ -1,11 +1,11 @@
-import { A as emberArray } from '@ember/array';
-import QueryParam from './query-param';
-import { PARACHUTE_QPS } from './symbols';
+import { A as emberArray } from "@ember/array";
+import QueryParam from "./query-param";
+import { PARACHUTE_QPS } from "./symbols";
 
 const { keys } = Object;
 
 /**
- * Meta class used by ember-parachute.
+ * Meta class used by @volldigital/ember-parachute.
  *
  * @export
  * @class ParachuteMeta
@@ -24,7 +24,7 @@ export default class ParachuteMeta {
     }, {});
 
     this.queryParamsArray = emberArray(
-      keys(this.queryParams).map(key => {
+      keys(this.queryParams).map((key) => {
         return this.queryParams[key];
       })
     );
@@ -39,7 +39,7 @@ export default class ParachuteMeta {
 
     // Meta info used by the decorators
     Object.defineProperty(this.qpMapForController, PARACHUTE_QPS, {
-      value: true
+      value: true,
     });
 
     this.qpMapForRoute = this.queryParamsArray.reduce(
