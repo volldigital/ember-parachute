@@ -1,6 +1,8 @@
-<div id="stars"></div>
-<div id="stars2"></div>
-<div id="stars3"></div>
+{{page-title 'Dummy'}}
+
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
 
 {{outlet}}
 
@@ -9,42 +11,42 @@
   fab=true
   primary=true
   onClick=(action (action (mut showHelpDialog) true))
-  class="help"
+  class='help'
 }}
-  {{paper-icon icon="help" size=36}}
+  {{paper-icon icon='help' size=36}}
 {{/paper-button}}
 
 {{#paper-button
   raised=true
   fab=true
   primary=true
-  href="https://github.com/@volldigital/ember-parachute"
-  target="_blank"
-  class="github"
+  href='https://github.com/@volldigital/ember-parachute'
+  target='_blank'
+  class='github'
 }}
-  <img src="images/github.png" alt="" ondragstart="return false;" />
+  <img src='images/github.png' alt='' ondragstart='return false;' />
 {{/paper-button}}
 
 {{#if showHelpDialog}}
   {{#paper-dialog
-    class="flex-50"
+    class='flex-50'
     onClose=(action (action (mut showHelpDialog) false))
-    openFrom=".help"
-    closeTo=".help"
+    openFrom='.help'
+    closeTo='.help'
     clickOutsideToClose=true
   }}
     {{#paper-toolbar}}
-      {{#paper-toolbar-tools class="help-dialog-header"}}
+      {{#paper-toolbar-tools class='help-dialog-header'}}
         <h2>Help</h2>
-        <span class="flex"></span>
+        <span class='flex'></span>
         {{#paper-button
           iconButton=true onClick=(action (action (mut showHelpDialog) false))
-        }}{{paper-icon icon="close"}}{{/paper-button}}
+        }}{{paper-icon icon='close'}}{{/paper-button}}
       {{/paper-toolbar-tools}}
     {{/paper-toolbar}}
 
     {{#paper-dialog-content}}
-      <h3>Parachute: <strong class="text-primary">Open</strong></h3>
+      <h3>Parachute: <strong class='text-primary'>Open</strong></h3>
       <p>
         With the
         <i>queryParamsDidChange</i>
@@ -52,9 +54,9 @@
         data fetching and loading state handling from our route"s controller.
       </p>
 
-      <span class="flex"></span>
+      <span class='flex'></span>
 
-      <h3>Parachute: <strong class="text-primary">Closed</strong></h3>
+      <h3>Parachute: <strong class='text-primary'>Closed</strong></h3>
       <p>
         Without Ember Parachute, we are forced to use the default model hooks
         provided by Ember"s route. If we return a promise from the
@@ -67,7 +69,7 @@
       </p>
     {{/paper-dialog-content}}
 
-    {{#paper-dialog-actions class="layout-row"}}
+    {{#paper-dialog-actions class='layout-row'}}
       {{#paper-button onClick=(action (action (mut showHelpDialog) false))}}Got
         It!{{/paper-button}}
     {{/paper-dialog-actions}}
