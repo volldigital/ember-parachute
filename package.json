@@ -12,7 +12,7 @@
     "url": "git+https://github.com/volldigital/ember-parachute.git"
   },
   "license": "MIT",
-  "author": "Offir Golan <@voll@gmail.com>",
+  "author": "VOLL digital <technik@voll.digital>",
   "directories": {
     "test": "tests"
   },
