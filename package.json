@@ -7,18 +7,22 @@
     "query params",
     "parachute"
   ],
-  "repository": "https://github.com/volldigital/ember-parachute",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volldigital/ember-parachute.git"
+  },
   "license": "MIT",
   "author": "Offir Golan <@voll@gmail.com>",
   "directories": {
-    "doc": "doc",
     "test": "tests"
   },
   "contributors": [
     "Lauren Tan <arr@sugarpirate.com>"
   ],
   "types": "index.d.ts",
-  "bugs": "https://github.com/volldigital/ember-parachute/issues",
+  "bugs": {
+    "url": "https://github.com/volldigital/ember-parachute/issues"
+  },
   "homepage": "https://github.com/volldigital/ember-parachute",
   "scripts": {
     "build": "ember build --environment=production",
@@ -48,7 +52,7 @@
     "ember-auto-import": "^2.6.3",
     "ember-cli": "~4.0.1",
     "ember-cli-autoprefixer": "^2.0.0",
-    "ember-cli-changelog": "html-next/ember-cli-changelog#v0.4.0-beta.1",
+    "ember-cli-changelog": "github:html-next/ember-cli-changelog#v0.4.0-beta.1",
     "ember-cli-dependency-checker": "^3.3.2",
     "ember-cli-github-pages": "^0.2.2",
     "ember-cli-inject-live-reload": "^2.1.0",
@@ -95,5 +99,6 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  }
+  },
+  "main": "index.js"
 }
