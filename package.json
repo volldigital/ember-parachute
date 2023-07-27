@@ -1,5 +1,5 @@
 {
-  "name": "@volldigital/ember-parachute",
+  "name": "@voll/ember-parachute",
   "version": "1.0.2",
   "description": "Improves the experience of working with query params in Ember",
   "keywords": [
@@ -7,9 +7,9 @@
     "query params",
     "parachute"
   ],
-  "repository": "https://github.com/@volldigital/ember-parachute",
+  "repository": "https://github.com/volldigital/ember-parachute",
   "license": "MIT",
-  "author": "Offir Golan <@volldigital@gmail.com>",
+  "author": "Offir Golan <@voll@gmail.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -18,8 +18,8 @@
     "Lauren Tan <arr@sugarpirate.com>"
   ],
   "types": "index.d.ts",
-  "bugs": "https://github.com/@volldigital/ember-parachute/issues",
-  "homepage": "https://github.com/@volldigital/ember-parachute",
+  "bugs": "https://github.com/volldigital/ember-parachute/issues",
+  "homepage": "https://github.com/volldigital/ember-parachute",
   "scripts": {
     "build": "ember build --environment=production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel \"lint:!(fix)\"",

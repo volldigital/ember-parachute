@@ -38,7 +38,7 @@ function queryParamsState(queryParamsArray, controller) {
  */
 export default function queryParamsStateFor(controller) {
   assert(
-    "[@volldigital/ember-parachute] Cannot construct query params state object without a controller",
+    "[@voll/ember-parachute] Cannot construct query params state object without a controller",
     isPresent(controller)
   );
   let { queryParamsArray } = QueryParams.metaFor(controller);

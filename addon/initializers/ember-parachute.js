@@ -234,6 +234,6 @@ export function initialize(/* application */) {
 }
 
 export default {
-  name: "@volldigital/ember-parachute",
+  name: "@voll/ember-parachute",
   initialize,
 };

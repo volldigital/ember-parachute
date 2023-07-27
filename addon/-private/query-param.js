@@ -14,7 +14,7 @@ const { canInvoke } = Ember;
 export default class QueryParam {
   constructor(key, options = {}) {
     assert(
-      `[@volldigital/ember-parachute] You must specify a key to the QueryParam Class`,
+      `[@voll/ember-parachute] You must specify a key to the QueryParam Class`,
       isPresent(key)
     );
 

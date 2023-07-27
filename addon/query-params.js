@@ -60,14 +60,14 @@ export default class QueryParams {
    */
   static metaFor(controller) {
     assert(
-      `[@volldigital/ember-parachute] The controller '${controller}' is not set up with @volldigital/ember-parachute.`,
+      `[@voll/ember-parachute] The controller '${controller}' is not set up with @voll/ember-parachute.`,
       this.hasParachute(controller)
     );
     return get(controller, PARACHUTE_META);
   }
 
   /**
-   * Check if the given controller has @volldigital/ember-parachute mixed in.
+   * Check if the given controller has @voll/ember-parachute mixed in.
    *
    * @method _hasParachute
    * @public
@@ -171,7 +171,7 @@ export default class QueryParams {
   static setDefaultValue(controller, param, defaultValue) {
     let { queryParams } = this.metaFor(controller);
     assert(
-      `[@volldigital/ember-parachute] The query parameter '${param}' does not exist.`,
+      `[@voll/ember-parachute] The query parameter '${param}' does not exist.`,
       queryParams[param]
     );
     set(queryParams[param], "defaultValue", defaultValue);

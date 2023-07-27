@@ -1,9 +1,9 @@
 import EmberObject from "@ember/object";
-import QueryParams from "@volldigital/ember-parachute";
+import QueryParams from "@voll/ember-parachute";
 import {
   withParachute,
   queryParam,
-} from "@volldigital/ember-parachute/decorators";
+} from "@voll/ember-parachute/decorators";
 import { module, test } from "qunit";
 
 @withParachute

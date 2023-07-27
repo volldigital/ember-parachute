@@ -1,4 +1,4 @@
 export {
   default,
   initialize,
-} from "@volldigital/ember-parachute/initializers/ember-parachute";
+} from "@voll/ember-parachute/initializers/ember-parachute";

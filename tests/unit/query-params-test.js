@@ -1,6 +1,6 @@
 import EmberObject from "@ember/object";
 import { assign } from "@ember/polyfills";
-import QueryParams from "@volldigital/ember-parachute";
+import QueryParams from "@voll/ember-parachute";
 import { module, test } from "qunit";
 
 const { keys } = Object;

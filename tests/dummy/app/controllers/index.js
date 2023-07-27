@@ -1,6 +1,6 @@
 import Controller from "@ember/controller";
 import { A } from "@ember/array";
-import { queryParam } from "@volldigital/ember-parachute/decorators";
+import { queryParam } from "@voll/ember-parachute/decorators";
 import { timeout } from "ember-concurrency";
 import { action } from "@ember-decorators/object";
 import { or } from "@ember-decorators/object/computed";

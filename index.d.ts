@@ -1,4 +1,4 @@
-declare module "@volldigital/ember-parachute" {
+declare module "@voll/ember-parachute" {
   interface QueryParamOption<T> {
     as?: string;
     defaultValue?: T;

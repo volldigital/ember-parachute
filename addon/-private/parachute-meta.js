@@ -5,7 +5,7 @@ import { PARACHUTE_QPS } from "./symbols";
 const { keys } = Object;
 
 /**
- * Meta class used by @volldigital/ember-parachute.
+ * Meta class used by @voll/ember-parachute.
  *
  * @export
  * @class ParachuteMeta

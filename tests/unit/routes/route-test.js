@@ -2,8 +2,8 @@ import Controller from "@ember/controller";
 import Route from "@ember/routing/route";
 import { on } from "@ember/object/evented";
 import { run } from "@ember/runloop";
-import QueryParams from "@volldigital/ember-parachute";
-import ParachuteEvent from "@volldigital/ember-parachute/-private/parachute-event";
+import QueryParams from "@voll/ember-parachute";
+import ParachuteEvent from "@voll/ember-parachute/-private/parachute-event";
 import { module, test } from "qunit";
 import { setupTest } from "ember-qunit";
 

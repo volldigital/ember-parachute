@@ -1,4 +1,4 @@
-import ParachuteMeta from "@volldigital/ember-parachute/-private/parachute-meta";
+import ParachuteMeta from "@voll/ember-parachute/-private/parachute-meta";
 import { module, test } from "qunit";
 
 module("Unit | Implementation | meta", function () {

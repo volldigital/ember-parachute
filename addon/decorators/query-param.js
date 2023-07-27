@@ -1,5 +1,5 @@
 import { A } from "@ember/array";
-import { PARACHUTE_QPS } from "@volldigital/ember-parachute/-private/symbols";
+import { PARACHUTE_QPS } from "@voll/ember-parachute/-private/symbols";
 import {
   addQueryParamFor,
   getQueryParamsFor,
